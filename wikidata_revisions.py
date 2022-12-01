@@ -7,7 +7,7 @@ import json
 
 from tqdm import tqdm
 
-DATA = pd.read_csv("phd_query - Arkusz1.csv") 
+DATA = pd.read_csv("") 
 
 wiki_ids = list(DATA["ID"])
 
@@ -70,4 +70,3 @@ def get_wikidata_revisions(list_of_q : list):
 
 
 
-result = get_wikidata_revisions(wiki_ids)
