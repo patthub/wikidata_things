@@ -33,12 +33,13 @@ def get_response(wiki_id : str):
   sort = "newer"
   URL = f"""https://www.wikidata.org/w/api.php?action=query&format=json&prop=revisions&titles={title}&rvprop={props}&rvdir={sort}"""
   
-  oper_url = urllib.request.urlopen(URL)
-  if(oper_url.getcode()==200):
+  open_url = urllib.request.urlopen(URL)
+  
+  if(open_url.getcode() == 200):
       data = oper_url.read()
       json_data = json.loads(data)
   else:
-      print("Error receiving data", oper_url.getcode())
+      print("Error receiving data", open_url.getcode())
   return json_data
 
 def get_wikidata_revisions(list_of_q : list):
