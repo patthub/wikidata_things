@@ -68,4 +68,6 @@ def get_wikidata_revisions(list_of_q : list):
 
   return result
 
+
+
 result = get_wikidata_revisions(wiki_ids)
